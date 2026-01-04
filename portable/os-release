@@ -1,0 +1,5 @@
+NAME="Python Portable Service With System Dependencies"
+ID=pyapp
+VERSION_ID=1.0
+PRETTY_NAME="Python 3.13 Portable Service"
+PORTABLE_PREFIXES=pyapp

@@ -1,0 +1,24 @@
+[Unit]
+Description=Python Django Portable Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/app
+Environment=LD_LIBRARY_PATH=/usr/lib
+Environment=PYAPP_DATA_DIR=/var/lib/pyapp
+ExecStart=/opt/app/.venv/bin/python manage.py runserver 0.0.0.0:8000
+Restart=on-failure
+RestartSec=5
+
+StateDirectory=pyapp
+DynamicUser=yes
+
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

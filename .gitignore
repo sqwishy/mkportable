@@ -1,0 +1,12 @@
+# Build artifacts
+.mkportable/
+*.raw
+*.tar
+
+# Build cache
+.cache/
+
+# Python
+__pycache__/
+*.py[oc]
+.venv/
